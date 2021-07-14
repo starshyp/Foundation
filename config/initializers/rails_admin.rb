@@ -1,6 +1,7 @@
 RailsAdmin.config do |config|
   require Rails.root.join('lib', 'watson.rb')
   require Rails.root.join('lib', 'maps.rb')
+
   ### Popular gems integration
 
   ## == Devise ==

@@ -1,0 +1,434 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<head>
+  <meta charset="utf-8" />
+  <title>Rocket Elevators - Quote</title>
+  <meta name="description" content="" />
+
+</head>
+
+  <body class="enable-animation">
+
+  <!-- wrapper -->
+  <div id="wrapper">
+
+    <div class="container">
+      <br>
+
+      <%= form_with(model: intervention, local: true) do |form| %>
+        <% if intervention.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(intervention.errors.count, "error") %> prohibited this intervention from being saved:</h2>
+
+            <ul>
+              <% intervention.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+      <h1>Intervention Form</h1>
+
+
+      <hr class="m-0" /><!-- 1px line separator -->
+
+      <!--        Display a DropDown Selector listing all clients (Table Customers), only one client can be selected at a time. As soon as the selection is made, the change triggers the action of the building selection field of the form - next step 2-->
+      <!--        Once you have selected the customer, you must then display a selector listing the buildings belonging to this customer. The dropdown selector allows you to enter only one building at a time. As soon as the selection is made, the change triggers the action of the battery selection field of the form - next step 3-->
+      <!--        Once the selection of the building has been made, a selector listing the batteries belonging to that building must then be displayed. The Dropdown selector allows only one battery to be entered at a time. As soon as the selection is made, the change triggers the action of the column selection field of the form - next step 4-->
+      <!--        Once the battery selection has been made, a selector listing the columns belonging to the battery must then be displayed. The Dropdown selector has a value of "None" among the choices and this is the default choice. The dropdown allows the entry of only one column at a time. As soon as the selection is made, the change triggers the action of the column selection field of the form - next step 5-->
+      <!--        Once the column has been selected, a selector listing the lifts belonging to the column is displayed. The Dropdown selector has a value "None" among the choices and it is the default choice. The dropdown allows the entry of only one elevator at a time.-->
+      <!--        The form also includes a Dropdown selector that lists all the company's employees (Table Employees) it has a value of "None" among the choices and this is the default choice. This dropdown is not linked to the previous cascade described via the dependencies of fields 1 to 5. This field is visible and accessible at all times in the form.-->
+      <!--        A "Description" input field is used to describe the nature of the intervention required.-->
+      <!--        A "Submit" button allows the request to be sent to the processing centre.-->
+
+
+<br/>
+
+          <label><%= form.label :employee_id %></label>
+          <%= form.collection_select :employee_id, Employee.order(:id), :id, :LastName, {:prompt => 'None'} %>
+        <br/>
+        <!--        <label>Clients:</label>-->
+          <label><%= form.label :customer_id %></label>
+          <%# f.collect :customer_id, Customer.all, :id, :CompanyName, { class: 'chosen-select'} %>
+          <%= form.collection_select :customer_id, Customer.order(:CompanyName), :id, :CompanyName, {:prompt => 'Select a Company'} %>
+        <br/>
+<!--          <label><%#= form.label :building_id %></label>-->
+        <%= form.collection_select :building_id, Building.order(:id), :id, :id, {} %>
+          <%#= form.select :building_id, @buildings, :selected => 'Select a Building' %>
+          <%#= form.select :building_id, Building.order(:id), {:selected => 'Select a Building'} %>
+        <br />
+<!--          <label><%#= form.label :battery_id %></label>-->
+          <%= form.collection_select :battery_id, Battery.order(:id), :id, :id, {} %>
+<br/>
+<!--          <label><%#= form.label :column_id %></label>-->
+          <%= form.collection_select :column_id, Column.order(:id), :id, :id, {} %>
+<br/>
+
+<!--          <label id="elevator_id"><%#= form.label :elevator_id %></label>-->
+          <%= form.collection_select :elevator_id, Elevator.order(:id), :id, :id, {} %>
+
+<br/>
+        <div class="row">
+          <div class="col-md-12" id="description">
+            <label><%= form.label :report, "Description" %></label>
+            <%= form.text_area( :report, size: "40x4") %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <button onclick="" class="btn btn-primary"><i class="fa fa-check"></i> SUBMIT </button>
+          </div>
+        </div>
+
+
+
+                <script>
+                    // Window.onload = function(){
+                    //     Intervention.reset();
+                    // }
+
+                    // $('#building_id').empty();
+                    $(document).ready(function(){
+                        // $("#customer_id").append('<option>Select a Company</option>');
+                        // $("#customer_id").empty();
+                        // sessionStorage.setItem("Select a Company", $("#customer_id select").first().val());
+                        // $('#customer_id select').change(function () {
+                        //     sessionStorage.setItem("Select a Company", $("#customer_id select").first().val());
+                        //     location.reload();
+                        // });
+
+                        $("#intervention_building_id").hide();
+                        $("#intervention_battery_id").hide();
+                        $("#intervention_column_id").hide();
+                        $("#intervention_elevator_id").hide();
+                        // $("#description").hide();
+                    });
+
+                    // $("#building_id").prop("disabled", true);
+                    $('#intervention_customer_id').on('change', function() {
+                        $('#intervention_building_id').show()
+                        $("#intervention_building_id").empty();
+                        $("#intervention_battery_id").empty();
+                        $("#intervention_column_id").empty();
+                        $("#intervention_elevator_id").empty();
+                        // let customer_id = $("#intervention_customer_id option:selected").val();
+                        customer_id = $(this).val();
+                        console.log(customer_id)
+                        $.ajax({
+                            cache: false,
+                            url: '/refreshbuildings',
+                            type: 'GET',
+                            dataType: 'json',
+                            data: {
+                                id: customer_id
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                console.log('TEST/////////////')
+                                // $.each (data, (index, value) =>
+
+                                // $('#building_id').append($(
+                                //     '<option>',
+                                //     {value: data.id},
+                                //     '</option>'
+                                // )),
+                                //)
+
+                                //var json = jQuery.parseJSON(data);
+
+                                /////////// ALTERNATIVE ///////////
+                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
+                                var data = data["buildings"]
+                                console.log(data)
+
+                                $("#intervention_building_id").empty();
+                                $("#intervention_building_id").append('<option>Select Building</option>');
+                                // $("#building_id").append(new Option('Select Building'));
+                                for (var i = 0; i < data.length; i++) {
+                                    $("#intervention_building_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
+                                    // $("#building_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
+                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
+                                    // },
+                                }
+                                ////////////////////////////////////
+                            }
+                        })
+
+                        // if ($('#building_id').val() != ''){
+                        //     $('#battery_id').show()
+                        // } else if ($('#battery_id').val() != '') {
+                        //     $('#column_id').show()
+                        //   } else ($('#column_id').val() != ''); {
+                        //       $('#elevator_id').show()
+                        // }
+
+                        // $("#refreshgallery").click(function(){
+                        //     $('#picturegallery').empty(); //remove all child nodes
+                        //     var newOption = $('<option value="1">test</option>');
+                        //     $('#picturegallery').append(newOption);
+                        //     $('#picturegallery').trigger("chosen:updated");
+                        // });
+
+                        // $.ajax({
+                        // url:'/watson/refreshaudio',
+                        // type:'POST',
+                        // dataType:'json',
+                        // data:{
+                        // authenticity_token: window._token
+                        // }
+                        // success:function(data){
+                        // 	alert("success!!!")
+                        // 	console.log(data)
+                        // },
+                        // error:function(data){
+                        // 	alert("failed!!!")
+                        // 	console.log(data)
+                        // }
+                        // });
+                        // $(".audio-play")[0].currentTime = 0;
+                        // return $(".audio-play")[0].play();
+                        // else $("audio-play").pause();
+                    });
+
+                    //////////// BATTERY ////////////
+                    $('#intervention_building_id').on('change', function() {
+                        $('#intervention_battery_id').show()
+                        $("#intervention_battery_id").empty();
+                        $("#intervention_column_id").empty();
+                        $("#intervention_elevator_id").empty();
+                        //let building_id = $("#building_id option:selected").val();
+                        building_id = $(this).val();
+                        console.log(building_id)
+                        $.ajax({
+                            cache: false,
+                            url: '/refreshbatteries',
+                            type: 'GET',
+                            dataType: 'json',
+                            data: {
+                                id: building_id
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                console.log('TEST/////////////')
+                                // $.each (data, (index, value) =>
+
+                                // $('#building_id').append($(
+                                //     '<option>',
+                                //     {value: data.id},
+                                //     '</option>'
+                                // )),
+                                //)
+
+                                //var json = jQuery.parseJSON(data);
+
+                                /////////// ALTERNATIVE ///////////
+                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
+                                var data = data["batteries"]
+                                console.log(data)
+
+                                $("#intervention_battery_id").empty();
+                                $("#intervention_battery_id").append('<option>Select Battery</option>');
+                                for (var i = 0; i < data.length; i++) {
+                                    $("#intervention_battery_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
+                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
+                                    // },
+                                }
+                                ////////////////////////////////////
+                            }
+                        })
+                    });
+
+                    //////////// COLUMN ////////////
+                    $('#intervention_battery_id').on('change', function() {
+                        $('#intervention_column_id').show()
+                        $("#intervention_column_id").empty();
+                        $("#intervention_elevator_id").empty();
+                        //let building_id = $("#building_id option:selected").val();
+                        battery_id = $(this).val();
+                        console.log(battery_id)
+                        $.ajax({
+                            cache: false,
+                            url: '/refreshcolumns',
+                            type: 'GET',
+                            dataType: 'json',
+                            data: {
+                                id: battery_id
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                console.log('TEST/////////////')
+                                // $.each (data, (index, value) =>
+
+                                // $('#building_id').append($(
+                                //     '<option>',
+                                //     {value: data.id},
+                                //     '</option>'
+                                // )),
+                                //)
+
+                                //var json = jQuery.parseJSON(data);
+
+                                /////////// ALTERNATIVE ///////////
+                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
+                                var data = data["columns"]
+                                console.log(data)
+
+                                $("#intervention_column_id").empty();
+                                $("#intervention_column_id").append('<option>Select Column</option>');
+                                for (var i = 0; i < data.length; i++) {
+                                    $("#intervention_column_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
+                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
+                                    // },
+                                }
+                                ////////////////////////////////////
+                            }
+                        })
+                    });
+
+                    //////////// ELEVATOR ////////////
+                    $('#intervention_column_id').on('change', function() {
+                        $('#intervention_elevator_id').show()
+                        $("#intervention_elevator_id").empty();
+                        //let building_id = $("#building_id option:selected").val();
+                        column_id = $(this).val();
+                        console.log(column_id)
+                        $.ajax({
+                            cache: false,
+                            url: '/refreshelevators',
+                            type: 'GET',
+                            dataType: 'json',
+                            data: {
+                                id: column_id
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                console.log('TEST/////////////')
+                                // $.each (data, (index, value) =>
+
+                                // $('#building_id').append($(
+                                //     '<option>',
+                                //     {value: data.id},
+                                //     '</option>'
+                                // )),
+                                //)
+
+                                //var json = jQuery.parseJSON(data);
+
+                                /////////// ALTERNATIVE ///////////
+                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
+                                var data = data["elevators"]
+                                console.log(data)
+
+                                $("#intervention_elevator_id").empty();
+                                $("#intervention_elevator_id").append('<option>Select Elevator</option>');
+                                for (var i = 0; i < data.length; i++) {
+                                    $("#intervention_elevator_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
+                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
+                                    // },
+                                }
+                                ////////////////////////////////////
+                            }
+                        })
+                    });
+                </script>
+
+
+
+      <%#= f.collection_select :product, @products.all, :id, :name, { class: 'chosen-select'} %>
+
+      <%#= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+      <%#= f.text_field :title %>
+      <%#= f.text_area :body, size: "60x12" %>
+      <%#= f.submit "Create" %>
+
+
+
+    </div>
+
+    <hr/><!-- 1px line separator -->
+
+  </div>
+  <!-- /wrapper -->
+
+
+  <!-- JAVASCRIPT FILES -->
+
+<!--   PAGELEVEL SCRIPTS-->
+  <%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+  <script>var plugin_path = 'assets/plugins/';</script>
+  <%= javascript_include_tag "/interventions.js" %>
+  <%#= javascript_include_tag rails_admin_path + "interventions" %>
+  <%#= javascript_include_tag "/interventions.coffee" %>
+
+
+  </body>
+<!--        </html>-->
+
+      <% end %>
+
+<!--  <div class="field">-->
+    <%#= form.label :author %>
+    <%#= form.text_field :author %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :customer_id %>
+    <%#= form.text_field :customer_id %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :building_id %>
+    <%#= form.text_field :building_id %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :battery_id %>
+    <%#= form.text_field :battery_id %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :column_id %>
+    <%#= form.text_field :column_id %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :elevator_id %>
+    <%#= form.text_field :elevator_id %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :employee_id %>
+    <%#= form.text_field :employee_id %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :start_date %>
+    <%#= form.datetime_select :start_date %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :end_date %>
+    <%#= form.datetime_select :end_date %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :result %>
+    <%#= form.text_field :result %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :report %>
+    <%#= form.text_field :report %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :status %>
+    <%#= form.text_field :status %>
+<!--  </div>-->
+
+<!--  <div class="actions">-->
+    <%#= form.submit %>
+<!--  </div>-->
+
