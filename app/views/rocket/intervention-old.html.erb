@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Rocket Elevators - Intervention</title>
-		<meta name="description" content="" />
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--	<head>-->
+<!--		<meta charset="utf-8" />-->
+<!--		<title>Rocket Elevators - Intervention</title>-->
+<!--		<meta name="description" content="" />-->
 
-	</head>
+<!--	</head>-->
 
-	<body class="enable-animation">
+<!--	<body class="enable-animation">-->
 
-		<!-- wrapper -->
-		<div id="wrapper">
+<!--		<!-- wrapper -->-->
+<!--		<div id="wrapper">-->
 
-			<div class="container">
-				<br>
+<!--			<div class="container">-->
+<!--				<br>-->
 
-				<h1>Intervention Form</h1>
+<!--				<h1>Intervention Form</h1>-->
 
 
-				<hr class="m-0" /><!-- 1px line separator -->
+<!--				<hr class="m-0" /><!-- 1px line separator -->-->
 
 <!--        Display a DropDown Selector listing all clients (Table Customers), only one client can be selected at a time. As soon as the selection is made, the change triggers the action of the building selection field of the form - next step 2-->
 <!--        Once you have selected the customer, you must then display a selector listing the buildings belonging to this customer. The dropdown selector allows you to enter only one building at a time. As soon as the selection is made, the change triggers the action of the battery selection field of the form - next step 3-->
@@ -30,54 +30,54 @@
 <!--        A "Submit" button allows the request to be sent to the processing centre.-->
 
 
-        <%= form_for Intervention.new do |i| %>
+        <%#= form_for Intervention.new do |i| %>
 
 <!--        <label>Clients:</label>-->
-          <div id="customer_id">
-          <label><%= i.label :customer_id %></label>
+<!--          <div id="customer_id">-->
+<!--          <label><%#= i.label :customer_id %></label>-->
           <%# f.collect :customer_id, Customer.all, :id, :CompanyName, { class: 'chosen-select'} %>
-          <%= i.collection_select :customer_id, Customer.order(:CompanyName), :id, :CompanyName, {:prompt => 'Select a Company'}, :selected => 'Select a Company' %>
-          </div>
-<br/>
-          <div id="building_id">
-          <label><%= i.label :building_id %></label>
-          <%= i.collection_select :building_id, Building.order(:id), :id, :id, {} %>
-          </div>
-<br />
-          <div id="battery_id">
-            <label><%= i.label :battery_id %></label>
-            <%= i.collection_select :battery_id, Battery.order(:id), :id, :id, {} %>
-          </div>
+          <%#= i.collection_select :customer_id, Customer.order(:CompanyName), :id, :CompanyName, {:prompt => 'Select a Company'}, :selected => 'Select a Company' %>
+<!--          </div>-->
+<!--<br/>-->
+<!--          <div id="building_id">-->
+<!--          <label><%#= i.label :building_id %></label>-->
+          <%#= i.collection_select :building_id, Building.order(:id), :id, :id, {} %>
+<!--          </div>-->
+<!--<br />-->
+<!--          <div id="battery_id">-->
+<!--            <label><%#= i.label :battery_id %></label>-->
+            <%#= i.collection_select :battery_id, Battery.order(:id), :id, :id, {} %>
+<!--          </div>-->
 
-          <div id="column_id">
-            <label><%= i.label :column_id %></label>
-            <%= i.collection_select :column_id, Column.order(:id), :id, :id, {} %>
-          </div>
+<!--          <div id="column_id">-->
+<!--            <label><%#= i.label :column_id %></label>-->
+            <%#= i.collection_select :column_id, Column.order(:id), :id, :id, {} %>
+<!--          </div>-->
 
-          <div id="elevator_id">
-            <label><%= i.label :elevator_id %></label>
-            <%= i.collection_select :elevator_id, Elevator.order(:id), :id, :id, {} %>
-          </div>
+<!--          <div id="elevator_id">-->
+<!--            <label><%#= i.label :elevator_id %></label>-->
+            <%#= i.collection_select :elevator_id, Elevator.order(:id), :id, :id, {} %>
+<!--          </div>-->
 
-          <div id="employee_id">
-            <label><%= i.label :employee_id %></label>
-            <%= i.collection_select :employee_id, Employee.order(:id), :id, :id, {} %>
-          </div>
+<!--          <div id="employee_id">-->
+<!--            <label><%#= i.label :employee_id %></label>-->
+            <%#= i.collection_select :employee_id, Employee.order(:id), :id, :id, {} %>
+<!--          </div>-->
 
-          <div class="row">
-            <div class="col-md-12">
-          <%= i.label :report, "Description" %>
-          <%= i.text_field :report %>
-            </div>
-          </div>
+<!--          <div class="row">-->
+<!--            <div class="col-md-12">-->
+          <%#= i.label :report, "Description" %>
+          <%#= i.text_field :report %>
+<!--            </div>-->
+<!--          </div>-->
 
-          <div class="row">
-            <div class="col-md-12">
-              <button onclick="" class="btn btn-primary"><i class="fa fa-check"></i> SUBMIT </button>
-            </div>
-          </div>
+<!--          <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--              <button onclick="" class="btn btn-primary"><i class="fa fa-check"></i> SUBMIT </button>-->
+<!--            </div>-->
+<!--          </div>-->
 
-        <% end %>
+        <%# end %>
 
 <!--          <script>-->
 <!--              // Window.onload = function(){-->
@@ -190,21 +190,21 @@
             <%#= f.submit "Create" %>
 
 
-				
-			</div>
 
-			<hr/><!-- 1px line separator -->
+<!--			</div>-->
 
-		</div>
-		<!-- /wrapper -->
+<!--			<hr/><!-- 1px line separator -->-->
+
+<!--		</div>-->
+<!--		<!-- /wrapper -->-->
 
 
-		<!-- JAVASCRIPT FILES -->
+<!--		<!-- JAVASCRIPT FILES -->-->
 
-		<!-- PAGELEVEL SCRIPTS -->
-		<%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
-  <%= javascript_include_tag "/interventions.js" %>
-		
+<!--		<!-- PAGELEVEL SCRIPTS -->-->
+		<%#= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+  <%#= javascript_include_tag "/interventions.js" %>
 
-	</body>
-</html>
+
+<!--	</body>-->
+<!--</html>-->
