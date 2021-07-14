@@ -1,5 +1,5 @@
 # Rocket-Elevators-Foundation
-### Website: http://www.rocketelevators.xyz/interventions/new
+### Website: www.rocketelevators.xyz
 
 <Details>
 <summary>CONSOLIDATION WEEK - INTERVENTION FORM</summary>
@@ -10,7 +10,7 @@ A way to manage interventions which includes a new form at /interventions/new an
 
 ### How to use
 
-You can go to the website (link above) and login with your email using password: 'codeboxx', or use 'nicolas.genest@codeboxx.biz' with password 'codeboxx'.
+You can go to the website (link above) and login with your email using password: 'codeboxx', or use 'nicolas.genest@codeboxx.biz' with password 'codeboxx'. Click on "Interventions" in th emenu bar or go directly to: www.rocketelevators.xyz/interventions/new
 
 ### Notes
 Please note NOT ALL CUSTOMERS HAVE A BUILDING. If you come across a customer with no buildings to select, it means they don't have a service contract with us, or are late with their service bill. In which case, please select another customer with buildings to see the cascading effect.
@@ -20,7 +20,7 @@ Please note NOT ALL CUSTOMERS HAVE A BUILDING. If you come across a customer wit
 
 ![](https://public.boxcloud.com/api/2.0/internal_files/833850589383/versions/893958026583/representations/png_paged_2048x2048/content/1.png?access_token=1!_Rr9hvrAxZLP9SvPsNVPI2749ovA0-m9pmG4EMo8gTa3s92rU4JSQM3saNrKdTNvuvV8A_f6BohRJBKesQ3jxqjxqeWlff2VknndcFdZYepleiW44JK5uR9tvLw2vHeDIfr3L9tmyAbitMZrD18XHLq3TVHUXyrGuRq2gF4ZFMwKs1tebHQSICmbvEXznY3V5in8BP72t7iXGRJId-1kTAt7389K6rpPh7da138d59fTFHeyWA9KujNU2YuUL2zV3uiS8QFQRMlhLKg5TORGpvQt9u_HAaZzuNpo8WagULG2jeOKjGLXzj-Q2MlQ7rdce_lHIHL-Rk8NpNkA7kkBGFxTvzoIob9zGHwtguwTMU1mKKXQVMlFBAThDuf9jmXy3-XXf0OGtvsM1AqmMPRWiNZde_0qjICQxipFFujo_WQzgG42p4TCT1rnPFkYYDVjYDpfScL5IBwZRBmlzKpHoRC6CcV7f_XBzg_cXJ5BDGDBA76i1v9gVE9MKpI-5mwidHwD7Opi--d7cTIgtKJT_XspcEHkg9gUOvl3hdXxANV9JxdlrlCS3jKqIWrn0L0.&shared_link=https%3A%2F%2Fapp.box.com%2Fs%2Fb7cd4p9udu2klkjrcdu2aqzwj9t5vr30&box_client_name=box-content-preview&box_client_version=2.75.0)
 
-![](https://public.boxcloud.com/api/2.0/internal_files/833850183219/versions/893957595219/representations/png_paged_2048x2048/content/1.png?access_token=1!fFG2l20IjsBRPF71IRs57uUsOfhmGrZpg03q4gHvZfP2gLckPacX0_vI-j981ELTA_3HM1xcRwFdqmwGG27jz-DUBtc17sfEhRXYs9xaVrSOCWfklM4zIikxdEUSu3I3Ve-1ThC6tCr8HJxCmaDFMoKSeb3nBbXZl51juIBW3GISrKNBKfmw-zjmz1xdTeEVekcxa-EKbEEdBmeSnrLUkH02krFBZYje1wn-P0Co7fsyHXDG69kp8ba9oh-RmdWncrOIxHXi-Tn7GpNN0q27eoN-F-mXGlk_29tRvCLGmr-6i9fX6wlWADKzDARBgfKrGMyhrXJ1RBflJd7mizSAtpRSnF7x_4QxVKSqGVkTqcdle6HEIqW6xOArtIE9Xt4nHi-TeMV4Gw3cJz9no-NzdkiJqS9IatSoaCya7cA5iz9zgQcHid93Z0RY06OUgm6NYyqgNoQG5NaftLxM8HkFk7E2f7wEanyN3U8aw-8sT93J69VPwlkvZshVRtCXmoo9NLl72zuxc0PR1BOJwRNNISmo5QlS7PGIoBjLt87zzwFA1uK3V3u83hLPMx8O9Mo.&shared_link=https%3A%2F%2Fapp.box.com%2Fs%2F4knyseroyamwc1oikvn4d7s16t61nfgh&box_client_name=box-content-preview&box_client_version=2.75.0)
+![](https://app.box.com/s/mhzt78crgyjcqg96b166inf8rt07vvc2)
 
 ![](https://public.boxcloud.com/api/2.0/internal_files/833850104729/versions/893957485529/representations/png_paged_2048x2048/content/1.png?access_token=1!rwemmJVBd9CAwKP0WmrMEDwgnoqIMzXjwzPn7HeeP7A4ZrQMFv7s5Xj7AqkYVUuHrEolNcytOgdvBu8w1hd-sVH429Un-TQeyFDxFXnqCifr9jkfLrgOCXmBpb8xrXwXlkDHiHiqNfaYMLlClOQsBZAwGLnBNnljs_mbY4w0wvNDie5aYAg-v3SQguwTUyxqa-GKQt-wQy4dcH0M55hZ4D0xp2zgFXYi3rMNcwN-K5jctDv2OdIcjJUVTuRPrvNDsAdqZKlgOElDvp3uuJDJZsFF8xTOSmx8658P-5LRYKw3wbsVzMyxPrmQeEGiZ7BKHldkXX4pM9J_PYCr8YG9GGU8OpGtfnFscfLSXvMYXWJPWGh0FruNuIFBIecMPJtZfLFdBx4zNa41pdDwYoVZS3xxAfVElP24OmEtXLw_WYDxzBNFc8JYorMv96lMLHi53J_w6ywLjbJ-uNcxspuENwpxEkimD8wyxBIW5s4QfivbMW-KlPjJcOM4fZq-4OYOppjb2PQkU9e3EtOU-XZ7i2Y5bHGS7FozNYt0vQL5jeKiaSaLFiOqPRuzXmwZDFs.&shared_link=https%3A%2F%2Fapp.box.com%2Fs%2Flo84xhzaehvhwfank99k0unm18lngudq&box_client_name=box-content-preview&box_client_version=2.75.0)
 
