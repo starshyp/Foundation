@@ -38,3 +38,5 @@ ibm-credentials.env
 
 # Ignore application configuration
 /config/application.yml
+/config/.DS_Store
+.DS_Store
