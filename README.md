@@ -1,4 +1,4 @@
-# Rocket-Elevators-Foundation
+# Rocket Elevators Foundation
 ### Website: www.rocketelevators.xyz
 
 <Details>
@@ -39,6 +39,8 @@ Form previews were taken in local environment. Names of customers and their asso
 ----------------
 </details>
 
+<details>
+<summary>PREVIOUS WEEKS </summary>
 Ruby version : ruby 2.6.6
 
 Rails version: Rails 5.2.6
@@ -73,10 +75,9 @@ Data transfer from MySQL to PostgreSQL is done through a rake task : - ```rails 
 For all the data transfers and making the right relationships for the transfers, the ":import" rake task
 has been used.
 
-For the three .SQL files, you can use this syntax while in the "current" folder of "RayanTaing" in the Codeboxx server : psql codeboxx -h codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com -d RayanTaing_datawarehouse_development -f QuoteRequest.sql
+For the three .SQL files, you can use this syntax while in the "current" folder of "ColbyB" in the Codeboxx server : psql codeboxx -h codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com -d RayanTaing_datawarehouse_development -f QuoteRequest.sql
 
 # Whats new (API week)
-
 Admins Dashboard
 - Audio briefing provided By IBM Watson
 - Maps For geolocating our "Customers" provided by Gmaps4rails
@@ -269,4 +270,6 @@ get "/watson/refreshaudio", to: "watson#refreshaudio"
 
 ### Notes
 After pressing the 'Play Briefing' button, give it 5 seconds to process and play. Also, after updating the count of a resource (leads, quotes, etc.), go back to the main 'Dashboard' then back to the audio tab and wait 30 seconds before playing the audio again for it to update with the new figures.
+</details>
+
 </details>
