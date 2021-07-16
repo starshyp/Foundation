@@ -94,7 +94,7 @@ class InterventionsController < ApplicationController
     #building = Building.where(building_id: params[address_id]).first
 
     notifier = Slack::Notifier.new ENV["WEBHOOK"]
-    notifier.ping "An intervention has been created by #{user.FirstName} for customer #{customer} for building: #{address}, battery id #{battery}, column id #{column}, and elevator id #{elevator}. #{employee} is on the case.
+    notifier.ping "An intervention has been created by #{user.FirstName} #{user.LastName} for customer #{customer} for building: #{address}, battery id #{battery}, column id #{column}, and elevator id #{elevator}. #{employee} is on the case.
 Report: #{report}"
 
   end
