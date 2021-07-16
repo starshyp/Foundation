@@ -79,20 +79,7 @@
 
 
                 <script>
-                    // Window.onload = function(){
-                    //     Intervention.reset();
-                    // }
-
-                    // $('#building_id').empty();
                     $(document).ready(function(){
-                        // $("#customer_id").append('<option>Select a Company</option>');
-                        // $("#customer_id").empty();
-                        // sessionStorage.setItem("Select a Company", $("#customer_id select").first().val());
-                        // $('#customer_id select').change(function () {
-                        //     sessionStorage.setItem("Select a Company", $("#customer_id select").first().val());
-                        //     location.reload();
-                        // });
-
                         $("#intervention_building_id").hide();
                         $("#intervention_battery_id").hide();
                         $("#intervention_column_id").hide();
@@ -121,69 +108,16 @@
                             success: function (data) {
                                 console.log(data)
                                 console.log('TEST/////////////')
-                                // $.each (data, (index, value) =>
-
-                                // $('#building_id').append($(
-                                //     '<option>',
-                                //     {value: data.id},
-                                //     '</option>'
-                                // )),
-                                //)
-
-                                //var json = jQuery.parseJSON(data);
-
-                                /////////// ALTERNATIVE ///////////
-                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
                                 var data = data["buildings"]
                                 console.log(data)
-
                                 $("#intervention_building_id").empty();
                                 $("#intervention_building_id").append('<option>Select Building</option>');
                                 // $("#building_id").append(new Option('Select Building'));
                                 for (var i = 0; i < data.length; i++) {
                                     $("#intervention_building_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
-                                    // $("#building_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
-                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
-                                    // },
                                 }
-                                ////////////////////////////////////
                             }
                         })
-
-                        // if ($('#building_id').val() != ''){
-                        //     $('#battery_id').show()
-                        // } else if ($('#battery_id').val() != '') {
-                        //     $('#column_id').show()
-                        //   } else ($('#column_id').val() != ''); {
-                        //       $('#elevator_id').show()
-                        // }
-
-                        // $("#refreshgallery").click(function(){
-                        //     $('#picturegallery').empty(); //remove all child nodes
-                        //     var newOption = $('<option value="1">test</option>');
-                        //     $('#picturegallery').append(newOption);
-                        //     $('#picturegallery').trigger("chosen:updated");
-                        // });
-
-                        // $.ajax({
-                        // url:'/watson/refreshaudio',
-                        // type:'POST',
-                        // dataType:'json',
-                        // data:{
-                        // authenticity_token: window._token
-                        // }
-                        // success:function(data){
-                        // 	alert("success!!!")
-                        // 	console.log(data)
-                        // },
-                        // error:function(data){
-                        // 	alert("failed!!!")
-                        // 	console.log(data)
-                        // }
-                        // });
-                        // $(".audio-play")[0].currentTime = 0;
-                        // return $(".audio-play")[0].play();
-                        // else $("audio-play").pause();
                     });
 
                     //////////// BATTERY ////////////
@@ -206,19 +140,6 @@
                             success: function (data) {
                                 console.log(data)
                                 console.log('TEST/////////////')
-                                // $.each (data, (index, value) =>
-
-                                // $('#building_id').append($(
-                                //     '<option>',
-                                //     {value: data.id},
-                                //     '</option>'
-                                // )),
-                                //)
-
-                                //var json = jQuery.parseJSON(data);
-
-                                /////////// ALTERNATIVE ///////////
-                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
                                 var data = data["batteries"]
                                 console.log(data)
 
@@ -226,10 +147,7 @@
                                 $("#intervention_battery_id").append('<option>Select Battery</option>');
                                 for (var i = 0; i < data.length; i++) {
                                     $("#intervention_battery_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
-                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
-                                    // },
                                 }
-                                ////////////////////////////////////
                             }
                         })
                     });
@@ -253,19 +171,6 @@
                             success: function (data) {
                                 console.log(data)
                                 console.log('TEST/////////////')
-                                // $.each (data, (index, value) =>
-
-                                // $('#building_id').append($(
-                                //     '<option>',
-                                //     {value: data.id},
-                                //     '</option>'
-                                // )),
-                                //)
-
-                                //var json = jQuery.parseJSON(data);
-
-                                /////////// ALTERNATIVE ///////////
-                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
                                 var data = data["columns"]
                                 console.log(data)
 
@@ -273,10 +178,7 @@
                                 $("#intervention_column_id").append('<option>Select Column</option>');
                                 for (var i = 0; i < data.length; i++) {
                                     $("#intervention_column_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
-                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
-                                    // },
                                 }
-                                ////////////////////////////////////
                             }
                         })
                     });
@@ -299,19 +201,6 @@
                             success: function (data) {
                                 console.log(data)
                                 console.log('TEST/////////////')
-                                // $.each (data, (index, value) =>
-
-                                // $('#building_id').append($(
-                                //     '<option>',
-                                //     {value: data.id},
-                                //     '</option>'
-                                // )),
-                                //)
-
-                                //var json = jQuery.parseJSON(data);
-
-                                /////////// ALTERNATIVE ///////////
-                                //https://fool-dev.com/how-to-create-a-dependent-dropdown-in-ruby-on-rails/
                                 var data = data["elevators"]
                                 console.log(data)
 
@@ -319,25 +208,11 @@
                                 $("#intervention_elevator_id").append('<option>Select Elevator</option>');
                                 for (var i = 0; i < data.length; i++) {
                                     $("#intervention_elevator_id").append('<option value="' + data[i]["id"] + '">' + data[i]["id"] + '</option>');
-                                    // $("#building_id").append('<option value="' + data["buildings"][i].id + '">' +  {value: data.id} + '</option>');
-                                    // },
                                 }
-                                ////////////////////////////////////
                             }
                         })
                     });
                 </script>
-
-
-
-      <%#= f.collection_select :product, @products.all, :id, :name, { class: 'chosen-select'} %>
-
-      <%#= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-      <%#= f.text_field :title %>
-      <%#= f.text_area :body, size: "60x12" %>
-      <%#= f.submit "Create" %>
-
-
 
     </div>
 
@@ -352,7 +227,7 @@
 <!--   PAGELEVEL SCRIPTS-->
   <%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
   <script>var plugin_path = 'assets/plugins/';</script>
-  <%= javascript_include_tag "/interventions.js" %>
+  <%#= javascript_include_tag "/interventions.js" %>
   <%#= javascript_include_tag rails_admin_path + "interventions" %>
   <%#= javascript_include_tag "/interventions.coffee" %>
 
@@ -361,68 +236,3 @@
 <!--        </html>-->
 
       <% end %>
-
-<!--  <div class="field">-->
-    <%#= form.label :author %>
-    <%#= form.text_field :author %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :customer_id %>
-    <%#= form.text_field :customer_id %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :building_id %>
-    <%#= form.text_field :building_id %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :battery_id %>
-    <%#= form.text_field :battery_id %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :column_id %>
-    <%#= form.text_field :column_id %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :elevator_id %>
-    <%#= form.text_field :elevator_id %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :employee_id %>
-    <%#= form.text_field :employee_id %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :start_date %>
-    <%#= form.datetime_select :start_date %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :end_date %>
-    <%#= form.datetime_select :end_date %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :result %>
-    <%#= form.text_field :result %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :report %>
-    <%#= form.text_field :report %>
-<!--  </div>-->
-
-<!--  <div class="field">-->
-    <%#= form.label :status %>
-    <%#= form.text_field :status %>
-<!--  </div>-->
-
-<!--  <div class="actions">-->
-    <%#= form.submit %>
-<!--  </div>-->
-
