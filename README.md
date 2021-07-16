@@ -46,15 +46,12 @@ Form previews were taken in local environment. Names of customers and their asso
 Notifications via Slack when new interventions are created.
 
 ### How to use
-You can go to the website (link above) and login with your email using password: 'codeboxx', or use 'nicolas.genest@codeboxx.biz' with password 'codeboxx'. Click on "Interventions" in the menu bar or go directly to: www.rocketelevators.xyz/interventions/new
+In the 'elevator_operations' channel, a bot is setup to automatically send a notification when a new intervention form is filled out.
 
-Once a new intervention is created, a notification is sent to the group channel: 
+#### previews:
+![](https://lh3.googleusercontent.com/pw/AM-JKLWr1wxmy_qilXLNJMGyz5RmPlfLTS1IJksY5b9zt2LkPS4lQc0uCYEkaxMGR4l4uuuIezWEawIQ0R4qVv1Gbc0fwSuzfNAnSK6g0BiTEm0rKhyGUB_os-WdcjLBGzvVf0avlqLXWovZN43rQ53IQENw=w801-h99-no)
 
-### Notes
-
-
-#### preview:
-![](https://lh3.googleusercontent.com/pw/AM-JKLWH76S9M6Z2kTtsMq97fxmB77bmSeS_gkOjXifFN0bqh9FpFp1A0sutx8W3mlPbTo6RmF1RhrkYZEggGE7E3vBkPZIL1uUFqsWQ1s5H5GZH_p36sxARUAseieXufao6kLttl4EAnfZPa7yidKp-qf5O=w1224-h735-no)
+![](https://lh3.googleusercontent.com/pw/AM-JKLXbMTyp_1X-H6FKw0wGa5C5bEGH06tFLlgIntokxG9t8f7BumrErVQlgQ-EznVwrjye2Ipu8uDKcJvr6-vEnHLXMbalukAVdCC2XQThbGg9rPglOPAFyjxp2XIS-6Lwr0wFetvMGfFYI-CowTRT0L72=w830-h97-no)
 
 ### New Gems installed and used
 
@@ -62,7 +59,7 @@ Once a new intervention is created, a notification is sent to the group channel:
 gem "slack-notifier"
 ```
 ### Other Notes
-Form previews were taken in local environment. Names of customers and their associated building/battery/column/elevator ids my be different than what's currently up.
+No additional notes.
 
 ----------------
 </details>
