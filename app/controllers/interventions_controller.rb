@@ -42,23 +42,60 @@ class InterventionsController < ApplicationController
     user = Employee.where(user_id: current_user.id).first
     # customer = Customer.where(params[:customer_id]).first.CompanyName
     customer = Customer.find(params[:intervention][:customer_id]).CompanyName
+
+    if Building.exists?(params[:intervention][:building_id]) then
     building = Building.find(params[:intervention][:building_id])
     address = Address.find(building.address_id).NumberAndStreet
+    else
+      address = "is empty"
+      end
+    #Address.find(Building.find(params[:intervention][:building_id]).address_id).NumberAndStreet
 
+    if Battery.exists?(params[:intervention][:battery_id]) then
     battery = Battery.find(params[:intervention][:battery_id]).id
+    else
+      battery = "x"
+    end
+
+    if Column.exists?(params[:intervention][:column_id]) then
     column = Column.find(params[:intervention][:column_id]).id
+    else
+      column = "x"
+    end
+
+    if Elevator.exists?(params[:intervention][:elevator_id]) then
     elevator = Elevator.find(params[:intervention][:elevator_id]).id
+    else
+      elevator = "x"
+      end
+
+    # Employee.find(params[:intervention][:employee_id]).present?
+
+    if Employee.exists?(params[:intervention][:employee_id]) then
+      employee_first_name = Employee.find(params[:intervention][:employee_id]).FirstName
+      employee_last_name = Employee.find(params[:intervention][:employee_id]).LastName
+      employee = employee_first_name + " " + employee_last_name
+      else
+      employee = "No employee"
+    end
+    #e2 = Employee.find(params[:intervention][:employee_id]).LastName
+    #
+    report = @intervention.report
+
+    #desc = params[:report]
+    # desc = Intervention.where("id = ?", Intervention.first.report)
+    # desc = Intervention.where(params[:report]).first.report
+    #desc = Intervention.find(Intervention.find(params[:intervention][:report]))
 
     #customer = Customer.where(params[:id]).first
     #building = Building.where(address_id: params[:NumberAndStreet]).first
-
-    #Address.find(Building.find(params[:intervention][:building_id]).address_id).NumberAndStreet
 
     #building = Building.where(params[:address_id]).first.NumberAndStreet
     #building = Building.where(building_id: params[address_id]).first
 
     notifier = Slack::Notifier.new ENV["WEBHOOK"]
-    notifier.ping "An intervention has been created by #{user.FirstName} for customer #{customer} for building: #{address}, battery id #{battery}, column id #{column}, and elevator id #{elevator}."
+    notifier.ping "An intervention has been created by #{user.FirstName} for customer #{customer} for building: #{address}, battery id #{battery}, column id #{column}, and elevator id #{elevator}. #{employee} is on the case.
+Report: #{report}"
 
   end
 
