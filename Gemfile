@@ -100,3 +100,5 @@ gem 'geocoder'
 
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
+
+gem "slack-notifier"

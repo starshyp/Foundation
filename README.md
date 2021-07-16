@@ -1,4 +1,4 @@
-# Rocket Elevators Foundation
+# Rocket Elevators Foundation - Intervention Form + Slack
 ### Website: www.rocketelevators.xyz
 
 <Details>
@@ -10,7 +10,7 @@ A way to manage interventions which includes a new form at /interventions/new an
 
 ### How to use
 
-You can go to the website (link above) and login with your email using password: 'codeboxx', or use 'nicolas.genest@codeboxx.biz' with password 'codeboxx'. Click on "Interventions" in th emenu bar or go directly to: www.rocketelevators.xyz/interventions/new
+You can go to the website (link above) and login with your email using password: 'codeboxx', or use 'nicolas.genest@codeboxx.biz' with password 'codeboxx'. Click on "Interventions" in the menu bar or go directly to: www.rocketelevators.xyz/interventions/new
 
 ### Notes
 Please note NOT ALL CUSTOMERS HAVE A BUILDING. If you come across a customer with no buildings to select, it means they don't have a service contract with us, or are late with their service bill. In which case, please select another customer with buildings to see the cascading effect.
@@ -37,6 +37,40 @@ None
 Form previews were taken in local environment. Names of customers and their associated building/battery/column/elevator ids my be different than what's currently up.
 
 ----------------
+</details>
+
+<Details>
+<summary>CONSOLIDATION WEEK - SLACK INTEGRATION</summary>
+
+### What is new?
+Notifications via Slack when new interventions are created.
+
+### How to use
+You can go to the website (link above) and login with your email using password: 'codeboxx', or use 'nicolas.genest@codeboxx.biz' with password 'codeboxx'. Click on "Interventions" in the menu bar or go directly to: www.rocketelevators.xyz/interventions/new
+
+Once a new intervention is created, a notification is sent to the group channel: 
+
+### Notes
+
+
+#### preview:
+![](https://lh3.googleusercontent.com/pw/AM-JKLWH76S9M6Z2kTtsMq97fxmB77bmSeS_gkOjXifFN0bqh9FpFp1A0sutx8W3mlPbTo6RmF1RhrkYZEggGE7E3vBkPZIL1uUFqsWQ1s5H5GZH_p36sxARUAseieXufao6kLttl4EAnfZPa7yidKp-qf5O=w1224-h735-no)
+
+### New Gems installed and used
+
+```bash
+gem "slack-notifier"
+```
+### Other Notes
+Form previews were taken in local environment. Names of customers and their associated building/battery/column/elevator ids my be different than what's currently up.
+
+----------------
+</details>
+
+<details>
+<summary>CONSOLIDATION WEEK - REST API</summary>
+
+Link to repo: [Rocket Elevators Foundation - REST API](https://github.com/starshyp/Rocket-Elevators-Foundation-REST-API)
 </details>
 
 <details>

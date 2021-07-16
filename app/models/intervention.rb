@@ -5,4 +5,6 @@ class Intervention < ApplicationRecord
   belongs_to :column, optional: true
   belongs_to :elevator, optional: true
   belongs_to :employee, optional: true
+  validates :report, :presence => true
+
 end

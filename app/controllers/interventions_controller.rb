@@ -1,11 +1,12 @@
 class InterventionsController < ApplicationController
   before_action :set_intervention, only: %i[ show edit update destroy ]
+  # after_action :new_intervention
+
+  require 'slack-notifier'
 
   # GET /interventions or /interventions.json
   def index
     @interventions = Intervention.all
-    # @customers = Customer.all
-    # @buildings = Building.where("customer_id = ?", Customer.first.id)
   end
 
   # GET /interventions/1 or /interventions/1.json
@@ -15,8 +16,6 @@ class InterventionsController < ApplicationController
   # GET /interventions/new
   def new
     @intervention = Intervention.new
-    #@customer params[:customers]
-    #
   end
 
   # GET /interventions/1/edit
@@ -39,7 +38,45 @@ class InterventionsController < ApplicationController
         format.json { render json: @intervention.errors, status: :unprocessable_entity }
       end
     end
+
+    user = Employee.where(user_id: current_user.id).first
+    # customer = Customer.where(params[:customer_id]).first.CompanyName
+    customer = Customer.find(params[:intervention][:customer_id]).CompanyName
+    building = Building.find(params[:intervention][:building_id])
+    address = Address.find(building.address_id).NumberAndStreet
+
+    battery = Battery.find(params[:intervention][:battery_id]).id
+    column = Column.find(params[:intervention][:column_id]).id
+    elevator = Elevator.find(params[:intervention][:elevator_id]).id
+
+    #customer = Customer.where(params[:id]).first
+    #building = Building.where(address_id: params[:NumberAndStreet]).first
+
+    #Address.find(Building.find(params[:intervention][:building_id]).address_id).NumberAndStreet
+
+    #building = Building.where(params[:address_id]).first.NumberAndStreet
+    #building = Building.where(building_id: params[address_id]).first
+
+    notifier = Slack::Notifier.new ENV["WEBHOOK"]
+    notifier.ping "An intervention has been created by #{user.FirstName} for customer #{customer} for building: #{address}, battery id #{battery}, column id #{column}, and elevator id #{elevator}."
+
   end
+
+  # def new_intervention
+  #
+  #   user = Employee.where(user_id: current_user.id).first
+  #   customer = Customer.where().first
+  #   # customer = Customer.where(["id = ?", id]).select("CompanyName").first
+  #
+  #   ##group chat with coaches
+  #   # notifier = Slack::Notifier.new ""
+  #   ##direct msg to me
+  #   notifier = Slack::Notifier.new ""
+  #   notifier.ping "An intervention has been created by #{user.FirstName} for customer #{customer}"
+  #   # slack = Slack::Notifier.new("")
+  #   #text = "An intervention #{self.id} has been created by author #{self.author} for customer #{self.customer_id}."
+  #   # $SlackClient.chat_postMessage(channel: '', text: text, as_user: true)
+  # end
 
   def refreshbuildings
     puts "Customer ID", params[:id]

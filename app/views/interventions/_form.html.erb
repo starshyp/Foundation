@@ -48,24 +48,18 @@
           <label><%= form.label :employee_id %></label>
           <%= form.collection_select :employee_id, Employee.order(:id), :id, :LastName, {:prompt => 'None'} %>
         <br/>
-        <!--        <label>Clients:</label>-->
           <label><%= form.label :customer_id %></label>
           <%# f.collect :customer_id, Customer.all, :id, :CompanyName, { class: 'chosen-select'} %>
           <%= form.collection_select :customer_id, Customer.order(:CompanyName), :id, :CompanyName, {:prompt => 'Select a Company'} %>
         <br/>
-<!--          <label><%#= form.label :building_id %></label>-->
         <%= form.collection_select :building_id, Building.order(:id), :id, :id, {} %>
           <%#= form.select :building_id, @buildings, :selected => 'Select a Building' %>
           <%#= form.select :building_id, Building.order(:id), {:selected => 'Select a Building'} %>
         <br />
-<!--          <label><%#= form.label :battery_id %></label>-->
           <%= form.collection_select :battery_id, Battery.order(:id), :id, :id, {} %>
-<br/>
-<!--          <label><%#= form.label :column_id %></label>-->
+        <br/>
           <%= form.collection_select :column_id, Column.order(:id), :id, :id, {} %>
-<br/>
-
-<!--          <label id="elevator_id"><%#= form.label :elevator_id %></label>-->
+        <br/>
           <%= form.collection_select :elevator_id, Elevator.order(:id), :id, :id, {} %>
 
 <br/>
