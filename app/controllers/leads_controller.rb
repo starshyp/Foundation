@@ -33,7 +33,7 @@ class LeadsController < ApplicationController
     #################### SENDGRID ALTERNATIVE ###################
     # #def sendgrid
     mail = Mail.new
-    mail.from = Email.new(email: 'rocketelevator312890+sendgrid@gmail.com')
+    mail.from = Email.new(email: ENV['SENDGRID_EMAIL'])
     personalization = Personalization.new
     personalization.add_to(Email.new(email: @lead.Email))
     #personalization.add_to(Email.new(email: params[:Email]))
@@ -42,7 +42,7 @@ class LeadsController < ApplicationController
       "ProjectName" => @lead.ProjectName
     })
     mail.add_personalization(personalization)
-    mail.template_id = 'd-a1170dbad8924f9ba0f038014445e76b'
+    mail.template_id = ENV['SENDGRID_TEMPLATE_ID']
 
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     begin
@@ -56,7 +56,7 @@ class LeadsController < ApplicationController
     puts response.headers
     # #end
     ######################## SENDGRID V1 ########################
-    # from = Email.new(email: 'rocketelevator312890+sendgrid@gmail.com')
+    # from = Email.new(email: '')
     # #to = SendGrid::Email.new(email: :Email.to_s)
     # to = Email.new(email: @lead.Email)
     # subject = 'Thanks for contacting us!'

@@ -40,3 +40,5 @@ ibm-credentials.env
 /config/application.yml
 /config/.DS_Store
 .DS_Store
+
+/config/environments/test.rb

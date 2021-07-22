@@ -57,7 +57,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  
+  gem 'rspec-rails', '~> 4.1.0'
+  gem 'webmock', '~> 3.13'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do
@@ -102,3 +105,10 @@ gem 'ed25519'
 gem 'bcrypt_pbkdf'
 
 gem "slack-notifier"
+
+gem 'rest-client', '~> 1.8'
+gem 'uri'
+gem 'net-http', '~> 0.1.1'
+gem 'openssl', '~> 2.2'
+
+gem 'devise-security'
