@@ -1,4 +1,60 @@
-# Rocket Elevators Foundation - Intervention Form + Slack
+# Rocket Elevators - TDD & Security
+
+<Details>
+<summary>TDD & SECURITY WEEK</summary>
+
+### What is new?
+
+A new content delivery module in the information system to enable media content placement in the company's elevators. Specifically, a stock ticker of the day stream was created which would come from a RapidAPI source but for testing stub requests were implemented. TDD was done using RSpec with the file located in the lib directory with its respective test file in the RSpec directory. Additional tests were also included in the existing information system located in the RSpec directory.
+
+### How to use
+
+```bash
+rspec --format doc --color
+```
+
+### Location
+There are five files where tests are located overall.
+- Lib/
+    - elevator_media.rb
+- spec/
+  - controllers/
+    - interventions_controller_spec.rb
+  - models/
+    - user_spec.rb
+  - customer_spec.rb
+  - elevator_media_spec.rb
+
+### Notes
+It may take about 30-60 seconds for the test to start after initiating the rspec command. Below is the preview of the successful tests, if you see red, please double check your rails env in rails_helper.rb and that the database in the env you're using has data in it as the interventions controller tests require existing data. You'll also need to include a devise config line in the same file. See both rails_helper.rb and spec_helper.rb to check it matches yours in case of any failures.
+
+#### test preview:
+![](https://lh3.googleusercontent.com/pw/AM-JKLU8FJQvbsScu90uUQ-r4TGHkxSsfvsj5Sul2sauDRKaHdmlTB5r4nUWJw9aWkorS29rzFkyfriwPO9S3cpBD7VFfzcG7zhIIDo-Lfq5MiNGmWMzzr1YJBPNqOYweeA031qGPBZOHcNPBkvtIHtxT5zb=w804-h687-no)
+
+### New Gems installed and used
+
+```bash
+group :development, :test do
+  gem 'rspec-rails', '~> 4.1.0'
+  gem 'webmock', '~> 3.13'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '~> 5.0'
+end
+
+gem 'uri'
+gem 'net-http', '~> 0.1.1'
+gem 'openssl', '~> 2.2'
+gem 'devise-security'
+```
+### Other Notes
+If for whatever reason after seeding you need to login to the back office via localhost, the new password is '#XPD!THjf2MDk7#d' with email of Mathieu, Patrick, or David A's codeboxx emails. Also, please note cap production deploy was not run, so changes are in this repo only and not on production. The security part of this week's project was submitted seperately as a Google Doc.
+
+----------------
+</details>
+
+<Details>
+<summary>CONSOLIDATION WEEK</summary>
+
 ### Website: www.rocketelevators.xyz
 
 <Details>
@@ -69,6 +125,7 @@ No additional notes.
 
 Link to repo: [Rocket Elevators Foundation - REST API](https://github.com/starshyp/Rocket-Elevators-Foundation-REST-API)
 </details>
+</Details>
 
 <details>
 <summary>PREVIOUS WEEKS </summary>

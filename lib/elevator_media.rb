@@ -38,11 +38,13 @@ module ElevatorMedia
 
     def tickers()
       symbol = ["TSLA", "AAPL", "GME"].sample
+      return symbol
+      # symbol = "TSLA"
     end
 
-    def random
-      "A" * rand(1..10)
-    end
+    # def random
+    #   "A" * rand(1..10)
+    # end
 
     # attr_accessor :make, :year, :color
     # attr_reader :wheels
