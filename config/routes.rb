@@ -47,5 +47,5 @@ Rails.application.routes.draw do
   get "/refreshcolumns", to: "interventions#refreshcolumns"
   get "/refreshelevators", to: "interventions#refreshelevators"
   # get "intervention/show"
-
+  get '/machineLearning', to: 'rocket#machineLearning'
 end

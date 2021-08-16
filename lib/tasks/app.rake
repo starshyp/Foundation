@@ -1,6 +1,8 @@
 require 'pg'
 
-con = PG::Connection.open(host: 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', port: 5432, user: 'codeboxx', dbname:'RayanTaing_datawarehouse_development', password:'Codeboxx1!')
+# con = PG::Connection.open(host: 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', port: 5432, user: 'codeboxx', dbname:'RayanTaing_datawarehouse_development', password:'Codeboxx1!')
+
+con = PG::Connection.open(host: 'ls-5e271cd9a16a2159f980e6c95d1ef49f19d9fa58.c8sdcbmurulc.us-east-1.rds.amazonaws.com', port: 5432, user: 'dbmasteruser', dbname:'ColbyBdwh', password:'rWdw]!GngDV_NOI2)h=rl9Q32F*b:OoA')
 
 #con = PG::Connection.open(host: 'localhost', port: 5432, user: 'postgres', dbname:'datawarehouse_development', password:'12345')
 

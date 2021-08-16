@@ -1,5 +1,7 @@
 {
   "name": "rocket",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "microsoft-cognitiveservices-speech-sdk": "^1.18.0"
+  }
 }

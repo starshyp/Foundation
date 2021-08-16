@@ -16,4 +16,7 @@ class RocketController < ApplicationController
   def interventions
 
   end
+  def machineLearning
+
+  end
 end
