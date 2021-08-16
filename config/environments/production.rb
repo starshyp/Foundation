@@ -96,4 +96,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "http://rocketelevators.xyz/" }
 
+  GA.tracker = "UA-205114566-1"
+
 end

@@ -87,7 +87,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faraday-net_http_persistent (v1.1.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday_middleware (v1.0.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faye-websocket (v0.11.1, RVM: ruby-2.6.6) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.1, RVM: ruby-2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.3, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi-compiler (v1.0.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fiber-local (v1.0.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="figaro (v1.2.0, RVM: ruby-2.6.6) [gem]" level="application" />
@@ -157,7 +157,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.3.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_admin (v2.1.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v5.2.6, RVM: ruby-2.6.6) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.3, RVM: ruby-2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.11.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.10.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.1.1, RVM: ruby-2.6.6) [gem]" level="application" />

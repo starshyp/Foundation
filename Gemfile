@@ -112,3 +112,4 @@ gem 'net-http', '~> 0.1.1'
 gem 'openssl', '~> 2.2'
 
 gem 'devise-security'
+gem 'google-analytics-rails', '~> 1.1', '>= 1.1.1'
