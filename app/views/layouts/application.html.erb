@@ -6,11 +6,11 @@
 		<%= csp_meta_tag %>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N3SVC59');</script>
+<!--    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+<!--            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+<!--        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+<!--        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+<!--    })(window,document,'script','dataLayer','GTM-N3SVC59');</script>-->
     <!-- End Google Tag Manager -->
 	
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -23,7 +23,7 @@
 		<!-- WEB FONTS : use %7C instead of | (pipe) -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
-    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
+    <%#= analytics_init if GoogleAnalytics.valid_tracker? %>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205114566-1"></script>-->
@@ -35,15 +35,23 @@
 <!--        gtag('config', 'UA-205114566-1');-->
 <!--    </script>-->
 
-
-
 	</head>
 
 	<body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3SVC59"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!--  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3SVC59"-->
+<!--                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
   <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205114566-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-205114566-1');
+  </script>
 
 		<div id="wrapper">
 		
