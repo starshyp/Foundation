@@ -95,6 +95,7 @@
     <orderEntry type="library" scope="PROVIDED" name="gli (v2.20.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gmaps4rails (v2.1.2, RVM: ruby-2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="google-analytics-rails (v1.1.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v5.2.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashdiff (v1.0.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v4.1.0, RVM: ruby-2.6.6) [gem]" level="application" />

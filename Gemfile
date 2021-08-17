@@ -113,3 +113,4 @@ gem 'openssl', '~> 2.2'
 
 gem 'devise-security'
 gem 'google-analytics-rails', '~> 1.1', '>= 1.1.1'
+gem 'newrelic_rpm', '~> 7.2'
