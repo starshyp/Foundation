@@ -23,17 +23,14 @@
 		<!-- WEB FONTS : use %7C instead of | (pipe) -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
-    <%#= analytics_init if GoogleAnalytics.valid_tracker? %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205114566-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<!--    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205114566-1"></script>-->
-<!--    <script>-->
-<!--        window.dataLayer = window.dataLayer || [];-->
-<!--        function gtag(){dataLayer.push(arguments);}-->
-<!--        gtag('js', new Date());-->
-
-<!--        gtag('config', 'UA-205114566-1');-->
-<!--    </script>-->
+        gtag('config', 'UA-205114566-1');
+    </script>
 
 	</head>
 
@@ -44,14 +41,7 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205114566-1"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-205114566-1');
-  </script>
 
 		<div id="wrapper">
 		
@@ -75,7 +65,7 @@
 
 		<p class="notice"><%= notice %></p>
 
-    <%= render 'layouts/footer' %>
+    <%#= render 'layouts/footer' %>
 		<%= javascript_include_tag "scripts" , 'data-turbolinks-track': 'reload' %>
 	</body>
 </html>
