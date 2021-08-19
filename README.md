@@ -9,12 +9,15 @@ A new server instance (Ubuntu) from AWS including necessary databases (PG and My
 ### How to use
 
 ```bash
+Website
 For security purposes, access is granted only to the three graders:
 mathieu.houde@codeboxx.biz
 patrick.thibault@codeboxx.biz
 david.amyot@codeboxx.biz
+password for all: #XPD!THjf2MDk7#d
 
-password: #XPD!THjf2MDk7#d
+Monitoring accounts
+Account access were sent to the above in the form of email invites.
 ```
 
 ### Features
