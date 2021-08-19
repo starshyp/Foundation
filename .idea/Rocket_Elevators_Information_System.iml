@@ -139,6 +139,7 @@
     <orderEntry type="library" scope="PROVIDED" name="net-scp (v3.0.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-ssh (v6.1.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="netrc (v0.11.0, RVM: ruby-2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v7.2.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.7, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.11.7, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="oauth2 (v1.4.7, RVM: ruby-2.6.6) [gem]" level="application" />

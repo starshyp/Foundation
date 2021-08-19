@@ -1,4 +1,85 @@
-# Rocket Elevators - TDD & Security
+# Rocket Elevators - Mobile & DevOps Week
+
+## www.rocketelevators.xyz
+
+### What is new?
+
+A new server instance (Ubuntu) from AWS including necessary databases (PG and MySql), and deployment of measurement tools including the implementation of New Relic APM and the implementation of Google Analytics both of which render data probed from the Rocket Elevators website.
+
+### How to use (Beta test)
+
+```bash
+For security purposes, access is granted only to the three graders:
+mathieu.houde@codeboxx.biz
+patrick.thibault@codeboxx.biz
+david.amyot@codeboxx.biz
+
+password: #XPD!THjf2MDk7#d
+```
+
+### Features
+- New server instance (ubuntu) from AWS
+- New MySQL connection from AWS
+- New Postgres connection from AWS
+- Deployment of New Relic Application Monitoring tools
+- Deployment of Google Analytics 
+- Updates to the connection strings of other projects
+
+### Updated connection strings
+- http://www.rocketelevators.xyz (website)
+- https://rocketapis.herokuapp.com/graphql (graphql)
+- https://rocketapis.azurewebsites.net/ (rest api)
+- https://rocketportaladmin.azurewebsites.net/ (customer portal)
+
+### Notes
+- Thank you
+
+### previews:
+#### new Ubuntu vm setup via Amazon Lightsail
+![](https://lh3.googleusercontent.com/pw/AM-JKLXXVmfCfXQ7dU0F5ItYInLwmBGSIy3eUnYLjRZN7resWmqwgvcoprlOWzjfAOoHsEhS-V_YCj0cYUq3Gdh1LUMQuE196a-cAV69fcMWTQI0eHsUJ78Og8BEVwCH4gpQEqqknDuRbZ1_8rcMMdutqERf=w1033-h1026-no?authuser=0)
+
+#### new MySql database via Amazon Lightsail
+![](https://lh3.googleusercontent.com/pw/AM-JKLVuPQGBNisJMsWIkjc0FTkt8pGZxvyLSTAbrooiDyhI82dnUefeMHkJ5IflluSfZBNULOaPjvVUB0d20R_CmghyW7KTDByZaBMoG6jXrScYo0wKraQL7NBYeCuhegxHwvdggGAY6QRcg8aO159DgBFR=w1082-h868-no?authuser=0)
+
+#### confirmation of MySql database setup
+![](https://lh3.googleusercontent.com/pw/AM-JKLXKG1H1GHbrDl-QEWBNa3X4sYj7R0DiV22l2i_npkxUIMbcLTpJl-3qYYxY2GUJhAz1Pn63jrv_5YwLGegSnMpGaTR417I8sF0jjlDqsVVFXCEXhwSW65gan2a4wDtyY0Nu5SW7clv_zcW5uNsvgST9=w1759-h1026-no?authuser=0)
+
+#### new PostgreSQL database via Amazon Lightsail
+![](https://lh3.googleusercontent.com/pw/AM-JKLVRQ2BPTi_OjJj-dcFzG3DdrIqLQLxHQRg79SyK43EmB308pvbCOnlcfABFG7hW5wMurDNucY9KrhQW76nHxuCFVFRzWWHVPbfZMpS43Z8uQQcxx-jiz3yA6R6NxclXWPGLEe1EcMCuQJTwWJ_mo6Oz=w1127-h875-no?authuser=0)
+
+#### confirmation of PostgreSQL database setup
+![](https://lh3.googleusercontent.com/pw/AM-JKLXz715_jDQruntc5-CXxMEnZEWxbJ0LmmNlIl0QoqMsxnX18RM8rzcRvPvK5Tz32Z3fcNoIll59VSgmfLnlMMaJYymsHBTOqHfQ93h6p09LU77UFpKljb89TLexZhfiJAjZ3OCs_ZQIZ1I8kiZDe2Zh=w1920-h676-no?authuser=0)
+
+#### Google Analytics monitoring
+![](https://lh3.googleusercontent.com/pw/AM-JKLW-JBdPWYqghnJq7zCSUSNPRvURD71A1giU5_iweSPm0VJNDJZeEc_iMo_9iMfgfEEVDVHz8oAdwRdGsvnwl8yOf1RBXNjYc0XJUxb9YGt_zndm8jJ1ZWrXBkss5SkpwJH8Zrq7LZ1N8F_QY_Ze1ePI=w1293-h974-no?authuser=0)
+
+#### New Relic monitoring 
+![](https://lh3.googleusercontent.com/pw/AM-JKLVZ1buJr1yuuf6DMY6HY1r_eBEXgfCNNM9isqvFieKd_IIhZ-fGKA93NvQNfHUl8fxzyN8YJfbLcbKuuy7sXscHVaRPbGACIEniGaG69HJ1ZHrM1NTXeWQU-7Dhv1og_i6EkYYRbLcjyu_EkD5xIU_G=w924-h1026-no?authuser=0)
+
+#### New Relic monitoring 2
+![](https://lh3.googleusercontent.com/pw/AM-JKLVFI0da6VKr34u6kL3emU2d7zuxwSGAQ8SJcO4fXST9-tovMmF1Ai5xQ5xv77755kWlVtNNhPVgtq2LcoGHePC0eSQtTI3rLaz2R-JDMAGO6pePqgEufQ2VCLwTgdvtYZoIPgNAATTqPW-nPmG8TuIH=w1441-h1026-no?authuser=0)
+
+#### new IP set in production deploy file
+![](https://lh3.googleusercontent.com/pw/AM-JKLWtfbLNn-IwoHW4G6Gm1FwYB5kN120VpRFBVEVhIOnGjCKuTUrumsULi_1YLdK_-2ObgwaVbWSpv_VrNvjYQF3lJGszmEAUL9cEcw53zUGWYtbX696FG1SeBy9k8_xO-xWprnzXAqk-V49UFh2dZPYD=w755-h206-no?authuser=0)
+
+#### new IP set in cloudflare
+![](https://lh3.googleusercontent.com/pw/AM-JKLUFiSWw__qKgarNlsRkpJcMmtpSIfREDlMnJtJaQAcxIJcHFrAMLdnhxe1QK6kvKD_f9gdrdLh81B8wDVq2Dos42aKTiZfowRwCbnmnx4DeaPQuViksh32yYmyl4yz9AMbb2YCX9WuJOz-IqI6pfU29=w1022-h76-no?authuser=0)
+
+#### new server and DB links setup in heroku for graphql project
+![](https://lh3.googleusercontent.com/pw/AM-JKLWwnUjwd_wJzZJSxfCHkfrHKcsO1hhenbY4V_KLIbqsBnxsQDzz14BYjA37yHDBt4c53VhQ3y7cFETZSDWRT1E0JHdkOQLCVkhBOt0Bnuzq2CoCx2hF67ti7uavwRgbwLaWlGLCJrbkeEpLRPmBpK2E=w1157-h1026-no?authuser=0)
+
+#### confirmation of new DB links working for graphql
+![](https://lh3.googleusercontent.com/pw/AM-JKLXPHQgxfcTY9bjt3rcEJAwdbRuk5je7c4A-txscsHXTBgYqGJDTc4r0ixi72K3uoU7zXFmfMt5DjAyu_qU9t3hy0wXVwrymfmz30y-FfZd-JDGgzG30chEtyyebybl-31gbW_43OyznSxP0MCumPxSp=w1513-h929-no?authuser=0)
+
+#### new connection strings setup in customer portal
+![](https://lh3.googleusercontent.com/pw/AM-JKLUTXrUJlg2qH5gVKlTinalvFlbi6KGNWdyvOycSVTXVyZtwuL1_-DVjtfwsxerGacUTm8te7AgkhnohhMwuUoxeEBPIO7aIPLfWie_nEpNl5Zh86eKeWYvhzV-8okarntveNYhb6I4vXVNOUKuUV4Im=w1314-h308-no?authuser=0)
+
+#### new connection strings setup in REST API project
+![](https://lh3.googleusercontent.com/pw/AM-JKLWtIYyQrmDqWOBCTSGq-vIVThxkeAtM7QRMpw-zAEb79uo924HXawnZN408_34JLWeX1LzFkukS1dWgMsUgKFjBktA6jd_o6lKJ0OFeXZe84X1ZndZ1KWjB2obfRodFsRmd-H4qbbndUJsA8RWevsNf=w1920-h450-no?authuser=0)
+
+
+----------------
+
 
 <Details>
 <summary>TDD & SECURITY WEEK</summary>

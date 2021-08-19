@@ -42,3 +42,5 @@ ibm-credentials.env
 .DS_Store
 
 /config/environments/test.rb
+
+.idea

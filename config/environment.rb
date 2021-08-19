@@ -6,7 +6,7 @@ Rails.application.initialize!
 
 # ActionMailer::Base.smtp_settings = {
 #   domain: 'localhost:3000',
-#   #domain: 'rocketelevators.online',
+#   #domain: 'www.rocketelevators.xyz',
 #   address:        "smtp.sendgrid.net",
 #   port:            587,
 #   authentication: :plain,
@@ -22,7 +22,7 @@ ActionMailer::Base.smtp_settings = {
   password:       ENV['SENDGRID_API_KEY'],
   #:password => Rails.application.secrets.SENDGRID_API_KEY,
   #domain:         'localhost:3000',
-  domain:         'rocketelevators.online',
+  domain:         'www.rocketelevators.xyz',
   address:        'smtp.sendgrid.net',
   port:            587,
   authentication: :plain,
