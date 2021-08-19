@@ -17,7 +17,7 @@ david.amyot@codeboxx.biz
 password for all: #XPD!THjf2MDk7#d
 
 Monitoring accounts
-Account access were sent to the above in the form of email invites.
+Account access were sent to each of the above emails in the form of email invites.
 ```
 
 ### Features
