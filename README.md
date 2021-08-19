@@ -17,7 +17,7 @@ david.amyot@codeboxx.biz
 password for all: #XPD!THjf2MDk7#d
 
 Monitoring accounts
-Account access were sent to each of the above emails in the form of email invites.
+Account/property access were sent to each of the above emails in the form of email invites.
 ```
 
 ### Features
@@ -25,7 +25,7 @@ Account access were sent to each of the above emails in the form of email invite
 - New MySQL connection from AWS
 - New Postgres connection from AWS
 - Deployment of New Relic Application Monitoring tools
-- Deployment of Google Analytics 
+- Deployment of Google Analytics (property name: RE-GA4)
 - Updates to the connection strings of other projects
 
 ### Updated connection strings
@@ -80,6 +80,11 @@ Account access were sent to each of the above emails in the form of email invite
 #### new connection strings setup in REST API project
 ![](https://lh3.googleusercontent.com/pw/AM-JKLWtIYyQrmDqWOBCTSGq-vIVThxkeAtM7QRMpw-zAEb79uo924HXawnZN408_34JLWeX1LzFkukS1dWgMsUgKFjBktA6jd_o6lKJ0OFeXZe84X1ZndZ1KWjB2obfRodFsRmd-H4qbbndUJsA8RWevsNf=w1920-h450-no?authuser=0)
 
+#### GA property access - 'RE-GA4' --renamed to 'RE-GA4-ColbyB'
+![](https://lh3.googleusercontent.com/pw/AM-JKLVQWwhOhU7CuPwQ47CvvNLTAxA1aHwPeMjMS8S3p3RZWJWvGLUcsJq0-6gTvD8IoKFjfcyY-5Ya3Zf3M19JWY2_p9dUAVg4n9fwls1SJsxz1jX-uICHHAI3apeGOiggWzuM7M7FdhEsS5XdhMdySlBR=w1519-h319-no?authuser=0)
+
+#### new relic account access
+![](https://lh3.googleusercontent.com/pw/AM-JKLWJHKP6HvdDeO9O-PtSGxCsYxvJlQ0w_u3reSPSvGDvNQOvUgKPnXcOlWnsHBIUYL1_-fPTOJ9gne07TcabG7EZAfIsoJy0iuXREjZFY0K53j42ZYZt0zG24DZDh4N3ZihNRJ50kgCU6Ek9bcVDIYJo=w1221-h288-no?authuser=0)
 
 ----------------
 
