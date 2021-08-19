@@ -6,7 +6,7 @@
 
 A new server instance (Ubuntu) from AWS including necessary databases (PG and MySql), and deployment of measurement tools including the implementation of New Relic APM and the implementation of Google Analytics both of which render data probed from the Rocket Elevators website.
 
-### How to use (Beta test)
+### How to use
 
 ```bash
 For security purposes, access is granted only to the three graders:
