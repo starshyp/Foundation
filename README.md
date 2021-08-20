@@ -10,7 +10,6 @@ A new server instance (Ubuntu) from AWS including necessary databases (PG and My
 
 ```bash
 Website
-For security purposes, access is granted only to the three graders:
 mathieu.houde@codeboxx.biz
 patrick.thibault@codeboxx.biz
 david.amyot@codeboxx.biz
